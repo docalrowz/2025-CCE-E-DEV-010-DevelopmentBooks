@@ -72,4 +72,15 @@ class PricingServiceTest {
         assertThat(service.price(b)).isEqualByComparingTo("187.50");
     }
 
+    @Test void rulesExample() {
+        var b = basket(new Object[][]{
+                {BookTitle.CLEAN_CODE,2},
+                {BookTitle.THE_CLEAN_CODER,2},
+                {BookTitle.CLEAN_ARCHITECTURE,2},
+                {BookTitle.TDD_BY_EXAMPLE,1},
+                {BookTitle.WORKING_EFFECTIVELY_WITH_LEGACY_CODE,1}
+        });
+        assertThat(service.price(b)).isEqualByComparingTo("320.00");
+    }
+
 }
