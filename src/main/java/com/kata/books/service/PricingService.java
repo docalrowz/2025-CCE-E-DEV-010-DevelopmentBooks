@@ -1,12 +1,11 @@
 package com.kata.books.service;
 
 import com.kata.books.model.BookTitle;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.math.*;
+import java.util.*;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PricingService {
 
     private static final BigDecimal UNIT = new BigDecimal("50.00");
